@@ -12,7 +12,7 @@ const getIcon = (iconName: string) => {
 };
 
 function HomePage() {
-  const [theme, setTheme] = useState('light-minimal');
+  const [theme] = useState('light-minimal');
   const [searchQuery, setSearchQuery] = useState('');
 
   const searchResults = searchQuery
