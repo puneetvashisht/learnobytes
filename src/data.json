@@ -1,0 +1,118 @@
+{
+  "vlogs": [
+    {
+      "id": "truth-and-travel",
+      "type": "Travel Vlog Series",
+      "title": "Truth & Travel",
+      "description": "Dive into my complete series on remote working setups and unfiltered nomad realities around the globe.",
+      "image": "/vlog.png",
+      "link": "/vlogs/truth-and-travel",
+      "footerIcon": "Clock",
+      "footerText1": "Featured Playlist",
+      "footerText2": "Continuously Updated",
+      "isVideo": true
+    },
+    {
+      "id": "nomad-tech-stack",
+      "type": "Blog Post",
+      "title": "The Ultimate Nomad Tech Stack",
+      "description": "From hardware to software: everything I carry in my 20L backpack to code from anywhere in the world.",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "link": "#",
+      "footerIcon": "BookOpen",
+      "footerText1": "8 min read",
+      "footerText2": "Oct 05, 2024",
+      "isVideo": false
+    },
+    {
+      "id": "saas-tokyo-cafe",
+      "type": "Dev Vlog",
+      "title": "Building a SaaS from a Tokyo Cafe",
+      "description": "Watch behind the scenes as I architect the database layer for my new product while sipping matcha.",
+      "image": "https://images.unsplash.com/photo-1542314831-c6a4d14d8857?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "link": "#",
+      "footerIcon": "Clock",
+      "footerText1": "22 min watch",
+      "footerText2": "Sep 28, 2024",
+      "isVideo": true
+    }
+  ],
+  "courses": [
+    {
+      "id": "modern-web-design",
+      "type": "Design",
+      "title": "Modern Web Design & Animations Masterclass",
+      "description": "Learn how to build stunning, award-winning websites with advanced CSS, WebGL, and micro-animations from scratch.",
+      "image": "/course.png",
+      "footerText1": "12 Modules • 48 Lessons",
+      "price": "$199",
+      "link": "#"
+    },
+    {
+      "id": "fullstack-react",
+      "type": "Engineering",
+      "title": "Fullstack React & Next.js Architecture",
+      "description": "Build scalable, enterprise-grade applications. Covering SSR, server components, and performance optimization.",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "footerText1": "10 Modules • 60 Lessons",
+      "price": "$249",
+      "link": "#"
+    }
+  ],
+  "trainingSchedule": [
+    {
+      "id": "advanced-react",
+      "date": "Nov 15",
+      "subtitle": "2024 • 10:00 AM UTC",
+      "title": "Advanced React Patterns",
+      "description": "A deep dive into custom hooks, suspense, and concurrent mode features for large scale apps. Click to register.",
+      "badge": "Upcoming",
+      "link": "/training/advanced-react",
+      "isUpcoming": true,
+      "opacity": 1.0
+    },
+    {
+      "id": "designing-for-conversion",
+      "date": "Dec 05",
+      "subtitle": "2024 • 02:00 PM UTC",
+      "title": "Designing for Conversion",
+      "description": "Live workshop on optimizing landing pages for better SaaS metrics and lower bounce rates.",
+      "badge": "Upcoming",
+      "link": "#",
+      "isUpcoming": true,
+      "opacity": 1.0
+    },
+    {
+      "id": "state-management",
+      "date": "Oct 02",
+      "subtitle": "2024 • Recorded",
+      "title": "State Management in 2024",
+      "description": "Comparing Zustand, Redux Toolkit, and Jotai in real-world scenarios.",
+      "isUpcoming": false,
+      "link": "#",
+      "opacity": 0.7
+    }
+  ],
+  "travelItinerary": [
+    {
+      "id": "kyoto-japan",
+      "date": "Nov 01 - 30",
+      "subtitle": "2024",
+      "title": "Kyoto, Japan",
+      "description": "Focusing on writing the next course module and filming the autumn tech vlog.",
+      "badge": "Current",
+      "locationTag": "Working from various Kissatens",
+      "isCurrent": true
+    },
+    {
+      "id": "cape-town",
+      "date": "Dec 05 - Jan 15",
+      "subtitle": "2024-2025",
+      "title": "Cape Town, South Africa",
+      "description": "Attending the African Tech Summit and filming a mini-documentary series.",
+      "badge": "Planned",
+      "locationTag": "Based in Camps Bay",
+      "isCurrent": false
+    }
+  ]
+}
