@@ -36,7 +36,7 @@ function HomePage() {
       <nav className="navbar">
         <div className="logo">
           <Compass size={28} color="var(--accent-secondary)" />
-          <span>NomadJourney</span>
+          <span>LearnObytes</span>
         </div>
 
         <div className="nav-links">
@@ -290,9 +290,9 @@ function HomePage() {
       <footer>
         <div style={{ marginBottom: '1.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }}>
           <Compass size={24} color="var(--accent-secondary)" />
-          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-primary)' }}>NomadJourney</span>
+          <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-primary)' }}>LearnObytes</span>
         </div>
-        <p>© 2024 NomadJourney. Designed with passion on the road.</p>
+        <p>© 2024 LearnObytes. Designed with passion on the road.</p>
       </footer>
     </div>
   );

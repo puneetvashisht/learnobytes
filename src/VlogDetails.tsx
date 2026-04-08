@@ -4,7 +4,7 @@ import './index.css';
 
 export default function VlogDetails() {
   return (
-    <div className="app-wrapper" data-theme="default" style={{ paddingBottom: '4rem', minHeight: '100vh' }}>
+    <div className="app-wrapper" data-theme="light-minimal" style={{ paddingBottom: '4rem', minHeight: '100vh' }}>
 
       {/* Background Effect */}
       <div className="bg-blobs">
@@ -16,7 +16,7 @@ export default function VlogDetails() {
       <nav className="navbar" style={{ position: 'relative' }}>
         <div className="logo">
           <Compass size={28} color="var(--accent-secondary)" />
-          <span>NomadJourney</span>
+          <span>LearnObytes</span>
         </div>
         <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 'bold' }} className="nav-link">
           <ArrowLeft size={20} color="var(--accent-primary)" /> Back to Hub
@@ -29,7 +29,7 @@ export default function VlogDetails() {
           <h1 className="hero-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', lineHeight: '1.1' }}>
             Truth & Travel Series
           </h1>
-          
+
           <p className="hero-subtitle" style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
             Watch my complete series on remote working setups and unfiltered nomad realities globally. Stream the latest updates straight from the playlist.
           </p>
