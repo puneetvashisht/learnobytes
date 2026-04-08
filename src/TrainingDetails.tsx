@@ -5,10 +5,31 @@ import './index.css';
 
 export default function TrainingDetails() {
   const [formData, setFormData] = useState({ name: '', phone: '' });
+  const [errors, setErrors] = useState({ name: '', phone: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const newErrors = { name: '', phone: '' };
+    let isValid = true;
+
+    if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters long.';
+      isValid = false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+
+    if (!emailRegex.test(formData.phone.trim()) && !phoneRegex.test(formData.phone.trim())) {
+      newErrors.phone = 'Please enter a valid email or phone number.';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    if (!isValid) return;
+
     setStatus('submitting');
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz2AlsGEqPqeAtNHu5tr47L59UnMMRKKwW_GJZ7cTxBZsxN4_niV31UiTKEVbzB1D75/exec";
 
@@ -100,22 +121,30 @@ export default function TrainingDetails() {
                 <input
                   type="text"
                   required
-                  style={{ width: '100%', padding: '1rem', borderRadius: '0.5rem', border: '1px solid var(--card-border)', background: 'rgba(0,0,0,0.2)', color: 'var(--text-primary)', outline: 'none' }}
+                  style={{ width: '100%', padding: '1rem', borderRadius: '0.5rem', border: `1px solid ${errors.name ? '#ef4444' : 'var(--card-border)'}`, background: 'rgba(0,0,0,0.2)', color: 'var(--text-primary)', outline: 'none' }}
                   placeholder="John Doe"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) => {
+                    setFormData({ ...formData, name: e.target.value });
+                    if (errors.name) setErrors({ ...errors, name: '' });
+                  }}
                 />
+                {errors.name && <span style={{ color: '#ef4444', fontSize: '0.875rem', marginTop: '0.25rem', display: 'block' }}>{errors.name}</span>}
               </div>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', color: 'var(--text-primary)' }}>Email or WhatsApp Number</label>
                 <input
                   type="text"
                   required
-                  style={{ width: '100%', padding: '1rem', borderRadius: '0.5rem', border: '1px solid var(--card-border)', background: 'rgba(0,0,0,0.2)', color: 'var(--text-primary)', outline: 'none' }}
+                  style={{ width: '100%', padding: '1rem', borderRadius: '0.5rem', border: `1px solid ${errors.phone ? '#ef4444' : 'var(--card-border)'}`, background: 'rgba(0,0,0,0.2)', color: 'var(--text-primary)', outline: 'none' }}
                   placeholder="john@example.com OR +123456789"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  onChange={(e) => {
+                    setFormData({ ...formData, phone: e.target.value });
+                    if (errors.phone) setErrors({ ...errors, phone: '' });
+                  }}
                 />
+                {errors.phone && <span style={{ color: '#ef4444', fontSize: '0.875rem', marginTop: '0.25rem', display: 'block' }}>{errors.phone}</span>}
               </div>
 
               {status === 'error' && (
