@@ -125,7 +125,7 @@ function HomePage() {
           Explore the World, <span>Master Your Craft</span>
         </h1>
         <p className="hero-subtitle">
-          Join a community of digital nomads and creators. Follow my travel vlogs, enroll in elite design & development courses, and keep track of my live training and global travel schedules.
+          True freedom isn't just location independence—it’s inner clarity. Join a community of conscious creators where we bridge <b>elite technical training</b> with <b>spiritual depth</b>. Follow my spiritual travel vlogs, access life coaching to master your interpersonal presence, and learn to live as the observer of a high-performance life.
         </p>
         <div className="cta-group">
           <button className="btn btn-primary" onClick={() => window.location.href = '#courses'}>
