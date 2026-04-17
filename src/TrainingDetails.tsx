@@ -1,9 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, MapPin, Users, CheckCircle, Compass, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import './index.css';
+import data from './data.json';
 
 export default function TrainingDetails() {
+  const { id } = useParams();
+  let training = data.trainingSchedule.find(t => t.id === id) || data.travelItinerary.find(t => t.id === id)
+  if (!training) return null;
+
   const [formData, setFormData] = useState({ name: '', phone: '' });
   const [errors, setErrors] = useState({ name: '', phone: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -77,24 +82,24 @@ export default function TrainingDetails() {
         <div className="hero-badge" style={{ display: 'inline-block' }}>Upcoming Live Session</div>
         <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', lineHeight: '1.1' }}>
           <span style={{ background: 'linear-gradient(to right, var(--accent-primary), var(--accent-secondary))', WebkitBackgroundClip: 'text', color: 'transparent' }}>
-            Advanced React Patterns
+            {training?.title}
           </span>
         </h1>
 
         <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '3rem', lineHeight: '1.6' }}>
-          Master the architecture of large-scale frontend applications. In this exclusive live session, we dive deep into Custom Hooks, Suspense, Concurrent Features, and scale-ready state management patterns.
+          {training?.pageDescription}
         </p>
 
         <div className="grid-2" style={{ marginBottom: '3rem' }}>
           <div className="card" style={{ padding: '2rem' }}>
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}><Calendar color="var(--accent-secondary)" /> Date & Time</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>November 15, 2024</p>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}><Clock size={16} style={{ display: 'inline', verticalAlign: '-2px' }} /> 10:00 AM UTC (2 Hours)</p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>{training?.date}</p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}><Clock size={16} style={{ display: 'inline', verticalAlign: '-2px' }} /> {training?.subtitle}</p>
           </div>
           <div className="card" style={{ padding: '2rem' }}>
             <h3 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'var(--text-primary)' }}><MapPin color="var(--accent-primary)" /> Location</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>Remote Zoom Webinar</p>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Link provided upon registration</p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>{training?.location}</p>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>Details provided upon registration</p>
           </div>
         </div>
 
@@ -158,7 +163,7 @@ export default function TrainingDetails() {
                 style={{ width: '100%', justifyContent: 'center', fontSize: '1.2rem', padding: '1.2rem', marginTop: '1rem', opacity: status === 'submitting' ? 0.7 : 1 }}
               >
                 {status === 'submitting' ? <Loader2 className="animate-spin" size={20} /> : <CheckCircle size={20} />}
-                {status === 'submitting' ? ' Sending Registration...' : ' Register Now - $49'}
+                {status === 'submitting' ? ' Sending Registration...' : ' Register Now'}
               </button>
             </form>
           )}

@@ -10,19 +10,21 @@
       "footerIcon": "Clock",
       "footerText1": "Featured Playlist",
       "footerText2": "Continuously Updated",
-      "isVideo": true
+      "isVideo": true,
+      "videoLink": "https://play.gumlet.io/embed/playlist/69ce51ef089517f6f4e0b6de"
     },
     {
-      "id": "nomad-tech-stack",
+      "id": "react-19-with-ai",
       "type": "Blog Post",
-      "title": "The Ultimate Nomad Tech Stack",
-      "description": "From hardware to software: everything I carry in my 20L backpack to code from anywhere in the world.",
-      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      "link": "#",
+      "title": "React 19 with AI",
+      "description": "Stop 'trying' to learn React and start building with it. This short and crisp course takes you beyond basic tutorials to understand the 'why' behind the Virtual DOM, Hooks, and State Management",
+      "image": "reactjs.png",
+      "link": "/vlogs/react-19-with-ai",
       "footerIcon": "BookOpen",
-      "footerText1": "8 min read",
-      "footerText2": "Oct 05, 2024",
-      "isVideo": false
+      "footerText1": "30 min only",
+      "footerText2": "May 05, 2026",
+      "isVideo": true,
+      "videoLink": "https://play.gumlet.io/embed/playlist/69e1b07442edcf24cabb3ab1"
     },
     {
       "id": "saas-tokyo-cafe",
@@ -63,18 +65,20 @@
     {
       "id": "advanced-react",
       "date": "Nov 15",
-      "subtitle": "2024 • 10:00 AM UTC",
+      "subtitle": "2026 • 10:00 AM UTC",
       "title": "Advanced React Patterns",
-      "description": "A deep dive into custom hooks, suspense, and concurrent mode features for large scale apps. Click to register.",
+      "description": "A deep dive into custom hooks, suspense, and concurrent mode features for large scale apps. Click to register now.",
+      "pageDescription": "Master the architecture of large-scale frontend applications. In this exclusive live session, we dive deep into Custom Hooks, Suspense, Concurrent Features, and scale-ready state management patterns.",
       "badge": "Upcoming",
       "link": "/training/advanced-react",
       "isUpcoming": true,
-      "opacity": 1.0
+      "opacity": 1.0,
+      "location": "LOGIX TECHNOVA, Block B, Sector 132, Noida, Uttar Pradesh 201304"
     },
     {
       "id": "designing-for-conversion",
       "date": "Dec 05",
-      "subtitle": "2024 • 02:00 PM UTC",
+      "subtitle": "2026 • 02:00 PM UTC",
       "title": "Designing for Conversion",
       "description": "Live workshop on optimizing landing pages for better SaaS metrics and lower bounce rates.",
       "badge": "Upcoming",
@@ -85,8 +89,8 @@
     {
       "id": "state-management",
       "date": "Oct 02",
-      "subtitle": "2024 • Recorded",
-      "title": "State Management in 2024",
+      "subtitle": "2026 • Recorded",
+      "title": "State Management in 2026",
       "description": "Comparing Zustand, Redux Toolkit, and Jotai in real-world scenarios.",
       "isUpcoming": false,
       "link": "#",
@@ -95,19 +99,22 @@
   ],
   "travelItinerary": [
     {
-      "id": "kyoto-japan",
-      "date": "Nov 01 - 30",
-      "subtitle": "2024",
-      "title": "Kyoto, Japan",
-      "description": "Focusing on writing the next course module and filming the autumn tech vlog.",
+      "id": "hcm-vietnam",
+      "date": "July 01 - 31",
+      "subtitle": "2026",
+      "title": "Ho Chi Minh City, Vietnam",
+      "description": "The HCM Alignment: Clarity, Purpose, and the 2.0 Version of You",
+      "pageDescription": "Most professionals are \"successful\" but misaligned. We’re bringing Mind, Body, and Career into a single, sharp focus. In this HCM intensive, we tackle the Clarity Gap. We’ll align your physical health (HIIT & Nutrition) with your professional output and personal purpose. Stop choosing between your health and your paycheck. Learn the \"learnObytes\" method to integrate fitness, financial clarity, and career fulfillment into one cohesive life.",
+      "link": "/training/hcm-vietnam",
       "badge": "Current",
-      "locationTag": "Working from various Kissatens",
-      "isCurrent": true
+      "locationTag": "Cafe",
+      "isCurrent": true,
+      "location": "Anywhere in Vietnam!"
     },
     {
       "id": "cape-town",
       "date": "Dec 05 - Jan 15",
-      "subtitle": "2024-2025",
+      "subtitle": "2026-2027",
       "title": "Cape Town, South Africa",
       "description": "Attending the African Tech Summit and filming a mini-documentary series.",
       "badge": "Planned",

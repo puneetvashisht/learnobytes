@@ -270,6 +270,20 @@ function HomePage() {
                     <span>{item.subtitle}</span>
                   </div>
                   <div className="timeline-content">
+                    {item.link && item.link !== '#' ? (
+                      <Link to={item.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h3 style={{ textDecoration: 'underline' }}>
+                          {item.title} {item.badge && <span className="badge-upcoming">{item.badge}</span>}
+                        </h3>
+                      </Link>
+                    ) : (
+                      <h3>
+                        {item.title} {item.badge && <span className="badge-upcoming">{item.badge}</span>}
+                      </h3>
+                    )}
+                    <p>{item.description}</p>
+                  </div>
+                  {/* <div className="timeline-content">
                     <h3>
                       {item.title} {item.badge && <span className="badge-upcoming" style={item.isCurrent ? { background: 'var(--card-border)' } : undefined}>{item.badge}</span>}
                     </h3>
@@ -277,7 +291,7 @@ function HomePage() {
                     <div className="location-tag">
                       <MapPin size={14} /> {item.locationTag}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -303,8 +317,8 @@ function App() {
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/training/advanced-react" element={<TrainingDetails />} />
-        <Route path="/vlogs/truth-and-travel" element={<VlogDetails />} />
+        <Route path="/training/:id" element={<TrainingDetails />} />
+        <Route path="/vlogs/:id" element={<VlogDetails />} />
       </Routes>
     </BrowserRouter>
   );

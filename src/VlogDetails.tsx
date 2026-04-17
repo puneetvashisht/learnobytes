@@ -1,8 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, Compass } from 'lucide-react';
 import './index.css';
+import data from './data.json';
 
 export default function VlogDetails() {
+  const { id } = useParams();
+  const vlog = data.vlogs.find(v => v.id === id);
+  if (!vlog) return null;
+
+
   return (
     <div className="app-wrapper" data-theme="light-minimal" style={{ paddingBottom: '4rem', minHeight: '100vh' }}>
 
@@ -41,7 +47,7 @@ export default function VlogDetails() {
             <iframe
               loading="lazy"
               title="Truth & Travel"
-              src="https://play.gumlet.io/embed/playlist/69ce51ef089517f6f4e0b6de"
+              src={vlog.videoLink}
               style={{ border: 'none', position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}
               referrerPolicy="origin"
               allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen"
